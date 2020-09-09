@@ -1,0 +1,126 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+	function compare()
+	{
+		var username=$("#username").val()
+		$.get("app.php"{username:username},
+		function (data){
+			$("#json_response").html(data);
+		});
+	}
+	</script>
+</head>
+<body>
+
+<div class="COMPARE">
+  <h1>GITHUBCOMPARE</h1>
+</div>
+
+<ul>
+  
+  <li><a href="file:///C:/xampp/htdocs/my-site/contact.html">Contact</a></li>
+  <li><a href="https://www.google.com/search?q=github+login&oq=github+&aqs=chrome.1.69i57j0l3j69i61j69i60l3.7432j0j7&sourceid=chrome&ie=UTF-8">About</a></li>
+</ul>
+
+<section>
+<div class="CenterDiv">
+   <form action="app.php " method="get" align='center'>
+     <h1>Login</h1>
+
+     
+		<img src="C:\Users\KIIT\Desktop\img_avatar.png" alt="Avatar" class="avatar">
+		<label for="username" font-size=11><b>username:</b></label>
+     <input type="text" placeholder="Enter username" name="username" required id="username"></input>
+
+
+     <button id="compare"onclick="compare()">compare</button>
+	 
+	 
+	<form>
+	
+</div>
+</section>
+<div id="json_response"></div>
+
+		
+
+</body>
+</html>
